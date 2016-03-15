@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630AE3931C973667003189D0 /* MyMessagesTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AE3921C973667003189D0 /* MyMessagesTableTableViewController.m */; };
 		6381C2E11C934C010028B382 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6381C2E01C934C010028B382 /* TableCell.m */; };
 		63BE65A81C8E7EC700E386A7 /* Bariol_Regular_Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63BE65A61C8E7EC700E386A7 /* Bariol_Regular_Italic.otf */; };
 		63BE65A91C8E7EC700E386A7 /* Bariol_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63BE65A71C8E7EC700E386A7 /* Bariol_Regular.otf */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		630AE3911C973667003189D0 /* MyMessagesTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMessagesTableTableViewController.h; sourceTree = "<group>"; };
+		630AE3921C973667003189D0 /* MyMessagesTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMessagesTableTableViewController.m; sourceTree = "<group>"; };
 		6381C2DF1C934C010028B382 /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
 		6381C2E01C934C010028B382 /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
 		63BE65A61C8E7EC700E386A7 /* Bariol_Regular_Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Regular_Italic.otf; sourceTree = "<group>"; };
@@ -64,9 +67,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		630AE38F1C97362E003189D0 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				6381C2DF1C934C010028B382 /* TableCell.h */,
+				6381C2E01C934C010028B382 /* TableCell.m */,
+			);
+			name = TableCells;
+			sourceTree = "<group>";
+		};
+		630AE3901C97363E003189D0 /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				63D8156C1C9389CA000CDEFD /* MyPostsViewController.h */,
+				63D8156D1C9389CA000CDEFD /* MyPostsViewController.m */,
+				630AE3911C973667003189D0 /* MyMessagesTableTableViewController.h */,
+				630AE3921C973667003189D0 /* MyMessagesTableTableViewController.m */,
+			);
+			name = TableViewControllers;
+			sourceTree = "<group>";
+		};
 		63BE65A41C8E7E9C00E386A7 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				630AE3901C97363E003189D0 /* TableViewControllers */,
+				630AE38F1C97362E003189D0 /* TableCells */,
 				63E416E71C8E16C60004A02A /* Main.storyboard */,
 				63E416EC1C8E16C60004A02A /* LaunchScreen.storyboard */,
 				63F17EB91C90A42700498C10 /* LoginViewController.h */,
@@ -79,10 +104,6 @@
 				63F17EC31C90A84400498C10 /* PageViewController.m */,
 				63E327F31C921AEE001B6FEE /* ProfileViewController.h */,
 				63E327F41C921AEE001B6FEE /* ProfileViewController.m */,
-				6381C2DF1C934C010028B382 /* TableCell.h */,
-				6381C2E01C934C010028B382 /* TableCell.m */,
-				63D8156C1C9389CA000CDEFD /* MyPostsViewController.h */,
-				63D8156D1C9389CA000CDEFD /* MyPostsViewController.m */,
 				63D8156F1C9395BC000CDEFD /* NavigationController.h */,
 				63D815701C9395BC000CDEFD /* NavigationController.m */,
 			);
@@ -214,6 +235,7 @@
 				63F17EBE1C90A43B00498C10 /* RegisterViewController.m in Sources */,
 				63F17EBB1C90A42700498C10 /* LoginViewController.m in Sources */,
 				63E416E31C8E16C60004A02A /* AppDelegate.m in Sources */,
+				630AE3931C973667003189D0 /* MyMessagesTableTableViewController.m in Sources */,
 				63E416E01C8E16C60004A02A /* main.m in Sources */,
 				63E327F51C921AEE001B6FEE /* ProfileViewController.m in Sources */,
 				63D815711C9395BC000CDEFD /* NavigationController.m in Sources */,
