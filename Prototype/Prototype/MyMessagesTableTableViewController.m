@@ -7,6 +7,7 @@
 //
 
 #import "MyMessagesTableTableViewController.h"
+#import "MessagesCell.h"
 
 @interface MyMessagesTableTableViewController ()
 
@@ -17,11 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    [self.tableView setBackgroundColor:[UIColor clearColor]];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    UIImageView *tableBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"WhiteBackground"]];
+    
+    [tableBackgroundView setFrame:self.tableView.frame];
+    
+    [self.tableView setBackgroundView:tableBackgroundView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,24 +35,30 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return 1;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    MessagesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessagesCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.ProfilePic.image = [UIImage imageNamed:@"MessagesPicture"];
+    cell.Name.text = @"Bryan Xiong";
+    cell.Time.text = @"1:23";
+    cell.TitleOfItem.text = @"Elementary Differential Equations";
+    cell.Arrow.image = [UIImage imageNamed:@"Arrow"];
     
     return cell;
 }
-*/
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100;
+}
+
 
 /*
 // Override to support conditional editing of the table view.

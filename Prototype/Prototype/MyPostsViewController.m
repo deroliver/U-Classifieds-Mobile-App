@@ -27,6 +27,12 @@
     
     [self.tableView setBackgroundView:tableBackgroundView];
     
+    [self.navigationController setNavigationBarHidden:NO];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -59,7 +65,7 @@
     cell.ItemPrice.text = @"$124.00";
     cell.ItemTitle.text = @"Elementary Differential Equations";
     cell.ItemSeller.text = @"Derik Oliver";
-    cell.EditionNumber.text = @"4th";
+    cell.EditionNumber.text = @"4th Edition";
     cell.DistanceAway.text = @"2.1 Miles Away";
     
     cell.ItemImage.image = [UIImage imageNamed:@"DifferentialSearch"];
@@ -69,7 +75,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
+    return 0.156 * [UIScreen mainScreen].bounds.size.height;
 }
 
 

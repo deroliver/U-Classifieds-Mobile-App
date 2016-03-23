@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6309F1E41C9F1F20003D51E2 /* ItemDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309F1E31C9F1F20003D51E2 /* ItemDetailsViewController.m */; };
 		630AE3931C973667003189D0 /* MyMessagesTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AE3921C973667003189D0 /* MyMessagesTableTableViewController.m */; };
+		630EFC201C989BD40039EE8A /* MessagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630EFC1F1C989BD40039EE8A /* MessagesController.m */; };
+		631173E41C9A1E8000D4A99A /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631173E31C9A1E8000D4A99A /* TabBarController.m */; };
+		631173E81C9A23F600D4A99A /* ProfileNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631173E71C9A23F600D4A99A /* ProfileNavController.m */; };
 		6381C2E11C934C010028B382 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6381C2E01C934C010028B382 /* TableCell.m */; };
+		638BFC181C98874E0065C74D /* MessagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BFC171C98874E0065C74D /* MessagesCell.m */; };
 		63BE65A81C8E7EC700E386A7 /* Bariol_Regular_Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63BE65A61C8E7EC700E386A7 /* Bariol_Regular_Italic.otf */; };
 		63BE65A91C8E7EC700E386A7 /* Bariol_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63BE65A71C8E7EC700E386A7 /* Bariol_Regular.otf */; };
 		63D8156E1C9389CA000CDEFD /* MyPostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8156D1C9389CA000CDEFD /* MyPostsViewController.m */; };
@@ -26,10 +31,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6309F1E21C9F1F20003D51E2 /* ItemDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailsViewController.h; sourceTree = "<group>"; };
+		6309F1E31C9F1F20003D51E2 /* ItemDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailsViewController.m; sourceTree = "<group>"; };
 		630AE3911C973667003189D0 /* MyMessagesTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMessagesTableTableViewController.h; sourceTree = "<group>"; };
 		630AE3921C973667003189D0 /* MyMessagesTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMessagesTableTableViewController.m; sourceTree = "<group>"; };
+		630EFC1E1C989BD40039EE8A /* MessagesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesController.h; sourceTree = "<group>"; };
+		630EFC1F1C989BD40039EE8A /* MessagesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesController.m; sourceTree = "<group>"; };
+		631173E21C9A1E8000D4A99A /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		631173E31C9A1E8000D4A99A /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		631173E61C9A23F600D4A99A /* ProfileNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileNavController.h; sourceTree = "<group>"; };
+		631173E71C9A23F600D4A99A /* ProfileNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileNavController.m; sourceTree = "<group>"; };
 		6381C2DF1C934C010028B382 /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
 		6381C2E01C934C010028B382 /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
+		638BFC161C98874E0065C74D /* MessagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesCell.h; sourceTree = "<group>"; };
+		638BFC171C98874E0065C74D /* MessagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesCell.m; sourceTree = "<group>"; };
 		63BE65A61C8E7EC700E386A7 /* Bariol_Regular_Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Regular_Italic.otf; sourceTree = "<group>"; };
 		63BE65A71C8E7EC700E386A7 /* Bariol_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Regular.otf; sourceTree = "<group>"; };
 		63D8156C1C9389CA000CDEFD /* MyPostsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPostsViewController.h; sourceTree = "<group>"; };
@@ -67,11 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6309F1E11C9F1F04003D51E2 /* UIViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6309F1E21C9F1F20003D51E2 /* ItemDetailsViewController.h */,
+				6309F1E31C9F1F20003D51E2 /* ItemDetailsViewController.m */,
+			);
+			name = UIViewControllers;
+			sourceTree = "<group>";
+		};
 		630AE38F1C97362E003189D0 /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
 				6381C2DF1C934C010028B382 /* TableCell.h */,
 				6381C2E01C934C010028B382 /* TableCell.m */,
+				638BFC161C98874E0065C74D /* MessagesCell.h */,
+				638BFC171C98874E0065C74D /* MessagesCell.m */,
 			);
 			name = TableCells;
 			sourceTree = "<group>";
@@ -83,13 +109,36 @@
 				63D8156D1C9389CA000CDEFD /* MyPostsViewController.m */,
 				630AE3911C973667003189D0 /* MyMessagesTableTableViewController.h */,
 				630AE3921C973667003189D0 /* MyMessagesTableTableViewController.m */,
+				630EFC1E1C989BD40039EE8A /* MessagesController.h */,
+				630EFC1F1C989BD40039EE8A /* MessagesController.m */,
 			);
 			name = TableViewControllers;
+			sourceTree = "<group>";
+		};
+		631173E11C9A1E6100D4A99A /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				631173E21C9A1E8000D4A99A /* TabBarController.h */,
+				631173E31C9A1E8000D4A99A /* TabBarController.m */,
+			);
+			name = TabBarControllers;
+			sourceTree = "<group>";
+		};
+		631173E51C9A23E000D4A99A /* NavControllers */ = {
+			isa = PBXGroup;
+			children = (
+				631173E61C9A23F600D4A99A /* ProfileNavController.h */,
+				631173E71C9A23F600D4A99A /* ProfileNavController.m */,
+			);
+			name = NavControllers;
 			sourceTree = "<group>";
 		};
 		63BE65A41C8E7E9C00E386A7 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				6309F1E11C9F1F04003D51E2 /* UIViewControllers */,
+				631173E51C9A23E000D4A99A /* NavControllers */,
+				631173E11C9A1E6100D4A99A /* TabBarControllers */,
 				630AE3901C97363E003189D0 /* TableViewControllers */,
 				630AE38F1C97362E003189D0 /* TableCells */,
 				63E416E71C8E16C60004A02A /* Main.storyboard */,
@@ -237,10 +286,15 @@
 				63E416E31C8E16C60004A02A /* AppDelegate.m in Sources */,
 				630AE3931C973667003189D0 /* MyMessagesTableTableViewController.m in Sources */,
 				63E416E01C8E16C60004A02A /* main.m in Sources */,
+				631173E41C9A1E8000D4A99A /* TabBarController.m in Sources */,
 				63E327F51C921AEE001B6FEE /* ProfileViewController.m in Sources */,
 				63D815711C9395BC000CDEFD /* NavigationController.m in Sources */,
+				6309F1E41C9F1F20003D51E2 /* ItemDetailsViewController.m in Sources */,
+				631173E81C9A23F600D4A99A /* ProfileNavController.m in Sources */,
+				638BFC181C98874E0065C74D /* MessagesCell.m in Sources */,
 				63F17EC11C90A54200498C10 /* RootViewController.m in Sources */,
 				63F17EC41C90A84400498C10 /* PageViewController.m in Sources */,
+				630EFC201C989BD40039EE8A /* MessagesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

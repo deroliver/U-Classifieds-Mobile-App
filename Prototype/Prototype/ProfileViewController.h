@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProfileViewController : UIPageViewController
-
+@interface ProfileViewController : UIViewController
 @property (copy, nonatomic) NSArray *categories;
 
 @end
