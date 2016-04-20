@@ -14,4 +14,10 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *LoginAppWidth;
 
+@property (weak, nonatomic) IBOutlet UITextField *EmailTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *PasswordTextField;
+
+
+
 @end

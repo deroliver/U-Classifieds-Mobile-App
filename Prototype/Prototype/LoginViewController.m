@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import <Parse/Parse.h>
 
 @interface LoginViewController ()
 
@@ -20,6 +21,27 @@
     self.LoginLabelWidth.constant = 129 * ([UIScreen mainScreen].bounds.size.width / 414);
     
     self.LoginLabelWidth.constant = 306 * ([UIScreen mainScreen].bounds.size.width / 414);
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self action:@selector(dismissKeyboard)];
+    tap.cancelsTouchesInView = NO;
+    
+    [self.view addGestureRecognizer:tap];
+}
+
+- (void)dismissKeyboard {
+    [self.view endEditing:YES];
+}
+
+- (IBAction)LoginButtonClicked:(id)sender {
+    NSString *username = self.EmailTextField.text;
+    NSString *password = self.PasswordTextField.text;
+    
+    [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error) {
+        if(error != nil)
+            NSLog(error.localizedDescription);
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
