@@ -37,8 +37,8 @@
 
 - (IBAction)RegisterButton:(id)sender {
     PFUser *user = [PFUser user];
-    user.username = @"deroliver";
-    user.password = @"seahawks";
+    user.username = @"deroliver1231";
+    user.password= @"23123seahawks";
     user.email = @"derik.oliver@gmail.com";
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -49,7 +49,6 @@
             NSLog(@"Successfull Account Creation");
         }
     }];
-    
 }
 
 

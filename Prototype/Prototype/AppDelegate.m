@@ -19,9 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
-        configuration.applicationId = @"e782dd9e-6a7b-4af7-8453-7262dc0cf32c";
+        configuration.applicationId = @"6d83691c-3dcd-44ab-9975-5f549b4a1b70";
         configuration.clientKey = @" ";
-        configuration.server = @"https://derikandbryan.azurewebsites.net";
+        configuration.server = @"https://derikbryanmobileapps.azurewebsites.net";
     }]];
     
     return YES;
