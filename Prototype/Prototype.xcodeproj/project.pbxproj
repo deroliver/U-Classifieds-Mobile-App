@@ -14,6 +14,10 @@
 		631173E81C9A23F600D4A99A /* ProfileNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631173E71C9A23F600D4A99A /* ProfileNavController.m */; };
 		6381C2E11C934C010028B382 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6381C2E01C934C010028B382 /* TableCell.m */; };
 		638BFC181C98874E0065C74D /* MessagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BFC171C98874E0065C74D /* MessagesCell.m */; };
+		63A192971CDBDEBF007C17DB /* ConversationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A192961CDBDEBF007C17DB /* ConversationTableViewController.m */; };
+		63A1929A1CDBE1B3007C17DB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A192991CDBE1B3007C17DB /* SearchViewController.m */; };
+		63A1929D1CDBE1E2007C17DB /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A1929C1CDBE1E2007C17DB /* SearchTableViewController.m */; };
+		63A192A11CDBE297007C17DB /* SearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A192A01CDBE297007C17DB /* SearchTableView.m */; };
 		63BE65A81C8E7EC700E386A7 /* Bariol_Regular_Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63BE65A61C8E7EC700E386A7 /* Bariol_Regular_Italic.otf */; };
 		63BE65A91C8E7EC700E386A7 /* Bariol_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63BE65A71C8E7EC700E386A7 /* Bariol_Regular.otf */; };
 		63D433B11CC6B8E600BB9C80 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D433AF1CC6B8E600BB9C80 /* Parse.framework */; };
@@ -57,6 +61,14 @@
 		6381C2E01C934C010028B382 /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
 		638BFC161C98874E0065C74D /* MessagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesCell.h; sourceTree = "<group>"; };
 		638BFC171C98874E0065C74D /* MessagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesCell.m; sourceTree = "<group>"; };
+		63A192951CDBDEBF007C17DB /* ConversationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationTableViewController.h; sourceTree = "<group>"; };
+		63A192961CDBDEBF007C17DB /* ConversationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationTableViewController.m; sourceTree = "<group>"; };
+		63A192981CDBE1B3007C17DB /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		63A192991CDBE1B3007C17DB /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		63A1929B1CDBE1E2007C17DB /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
+		63A1929C1CDBE1E2007C17DB /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
+		63A1929F1CDBE297007C17DB /* SearchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableView.h; sourceTree = "<group>"; };
+		63A192A01CDBE297007C17DB /* SearchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableView.m; sourceTree = "<group>"; };
 		63BE65A61C8E7EC700E386A7 /* Bariol_Regular_Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Regular_Italic.otf; sourceTree = "<group>"; };
 		63BE65A71C8E7EC700E386A7 /* Bariol_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Regular.otf; sourceTree = "<group>"; };
 		63D433AF1CC6B8E600BB9C80 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Parse.framework; sourceTree = "<group>"; };
@@ -121,8 +133,22 @@
 		6309F1E11C9F1F04003D51E2 /* UIViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				63F17EB91C90A42700498C10 /* LoginViewController.h */,
+				63F17EBA1C90A42700498C10 /* LoginViewController.m */,
+				63F17EBC1C90A43B00498C10 /* RegisterViewController.h */,
+				63F17EBD1C90A43B00498C10 /* RegisterViewController.m */,
+				63F17EBF1C90A54200498C10 /* RootViewController.h */,
+				63F17EC01C90A54200498C10 /* RootViewController.m */,
+				63F17EC21C90A84400498C10 /* PageViewController.h */,
+				63F17EC31C90A84400498C10 /* PageViewController.m */,
+				63E327F31C921AEE001B6FEE /* ProfileViewController.h */,
+				63E327F41C921AEE001B6FEE /* ProfileViewController.m */,
+				63D8156F1C9395BC000CDEFD /* NavigationController.h */,
+				63D815701C9395BC000CDEFD /* NavigationController.m */,
 				6309F1E21C9F1F20003D51E2 /* ItemDetailsViewController.h */,
 				6309F1E31C9F1F20003D51E2 /* ItemDetailsViewController.m */,
+				63A192981CDBE1B3007C17DB /* SearchViewController.h */,
+				63A192991CDBE1B3007C17DB /* SearchViewController.m */,
 			);
 			name = UIViewControllers;
 			sourceTree = "<group>";
@@ -147,6 +173,10 @@
 				630AE3921C973667003189D0 /* MyMessagesTableTableViewController.m */,
 				630EFC1E1C989BD40039EE8A /* MessagesController.h */,
 				630EFC1F1C989BD40039EE8A /* MessagesController.m */,
+				63A192951CDBDEBF007C17DB /* ConversationTableViewController.h */,
+				63A192961CDBDEBF007C17DB /* ConversationTableViewController.m */,
+				63A1929B1CDBE1E2007C17DB /* SearchTableViewController.h */,
+				63A1929C1CDBE1E2007C17DB /* SearchTableViewController.m */,
 			);
 			name = TableViewControllers;
 			sourceTree = "<group>";
@@ -169,9 +199,19 @@
 			name = NavControllers;
 			sourceTree = "<group>";
 		};
+		63A1929E1CDBE27B007C17DB /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				63A1929F1CDBE297007C17DB /* SearchTableView.h */,
+				63A192A01CDBE297007C17DB /* SearchTableView.m */,
+			);
+			name = TableViews;
+			sourceTree = "<group>";
+		};
 		63BE65A41C8E7E9C00E386A7 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				63A1929E1CDBE27B007C17DB /* TableViews */,
 				6309F1E11C9F1F04003D51E2 /* UIViewControllers */,
 				631173E51C9A23E000D4A99A /* NavControllers */,
 				631173E11C9A1E6100D4A99A /* TabBarControllers */,
@@ -179,18 +219,6 @@
 				630AE38F1C97362E003189D0 /* TableCells */,
 				63E416E71C8E16C60004A02A /* Main.storyboard */,
 				63E416EC1C8E16C60004A02A /* LaunchScreen.storyboard */,
-				63F17EB91C90A42700498C10 /* LoginViewController.h */,
-				63F17EBA1C90A42700498C10 /* LoginViewController.m */,
-				63F17EBC1C90A43B00498C10 /* RegisterViewController.h */,
-				63F17EBD1C90A43B00498C10 /* RegisterViewController.m */,
-				63F17EBF1C90A54200498C10 /* RootViewController.h */,
-				63F17EC01C90A54200498C10 /* RootViewController.m */,
-				63F17EC21C90A84400498C10 /* PageViewController.h */,
-				63F17EC31C90A84400498C10 /* PageViewController.m */,
-				63E327F31C921AEE001B6FEE /* ProfileViewController.h */,
-				63E327F41C921AEE001B6FEE /* ProfileViewController.m */,
-				63D8156F1C9395BC000CDEFD /* NavigationController.h */,
-				63D815701C9395BC000CDEFD /* NavigationController.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -329,18 +357,22 @@
 			files = (
 				6381C2E11C934C010028B382 /* TableCell.m in Sources */,
 				63D8156E1C9389CA000CDEFD /* MyPostsViewController.m in Sources */,
+				63A192971CDBDEBF007C17DB /* ConversationTableViewController.m in Sources */,
 				63F17EBE1C90A43B00498C10 /* RegisterViewController.m in Sources */,
+				63A1929A1CDBE1B3007C17DB /* SearchViewController.m in Sources */,
 				63F17EBB1C90A42700498C10 /* LoginViewController.m in Sources */,
 				63E416E31C8E16C60004A02A /* AppDelegate.m in Sources */,
 				630AE3931C973667003189D0 /* MyMessagesTableTableViewController.m in Sources */,
 				63E416E01C8E16C60004A02A /* main.m in Sources */,
 				631173E41C9A1E8000D4A99A /* TabBarController.m in Sources */,
 				63E327F51C921AEE001B6FEE /* ProfileViewController.m in Sources */,
+				63A1929D1CDBE1E2007C17DB /* SearchTableViewController.m in Sources */,
 				63D815711C9395BC000CDEFD /* NavigationController.m in Sources */,
 				6309F1E41C9F1F20003D51E2 /* ItemDetailsViewController.m in Sources */,
 				631173E81C9A23F600D4A99A /* ProfileNavController.m in Sources */,
 				638BFC181C98874E0065C74D /* MessagesCell.m in Sources */,
 				63F17EC11C90A54200498C10 /* RootViewController.m in Sources */,
+				63A192A11CDBE297007C17DB /* SearchTableView.m in Sources */,
 				63F17EC41C90A84400498C10 /* PageViewController.m in Sources */,
 				630EFC201C989BD40039EE8A /* MessagesController.m in Sources */,
 			);

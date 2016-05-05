@@ -36,17 +36,30 @@
 
 
 - (IBAction)RegisterButton:(id)sender {
+    /*
+    PFObject *user = [PFObject objectWithClassName:@"User"];
+    user[@"username"] = @"deroliver";
+    user[@"password"] = @"seahawks12";
+    
+    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if(succeeded) {
+            NSLog(@"Successfull Account Creation");
+        } else {
+            NSLog(error.description);
+        }
+    }];
+     */
+    
     PFUser *user = [PFUser user];
-    user.username = @"deroliver1231";
-    user.password= @"23123seahawks";
-    user.email = @"derik.oliver@gmail.com";
+    user.username = self.UsernameTextField.text;
+    user.password = self.PasswordTextField.text;
+    user.email = self.EmailAddressTextField.text;
     
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if(error != nil) {
-            NSLog(error.localizedDescription);
-        }
-        else {
+        if(!error) {
             NSLog(@"Successfull Account Creation");
+        } else {
+            NSLog(error.description);
         }
     }];
 }

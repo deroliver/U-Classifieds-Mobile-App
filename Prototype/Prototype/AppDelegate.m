@@ -21,7 +21,7 @@
     [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
         configuration.applicationId = @"6d83691c-3dcd-44ab-9975-5f549b4a1b70";
         configuration.clientKey = @" ";
-        configuration.server = @"https://derikbryanmobileapps.azurewebsites.net";
+        configuration.server = @"https://derikbryanmobileapps.azurewebsites.net/parse";
     }]];
     
     return YES;
