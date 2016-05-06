@@ -44,6 +44,7 @@
 		63F17EBE1C90A43B00498C10 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F17EBD1C90A43B00498C10 /* RegisterViewController.m */; };
 		63F17EC11C90A54200498C10 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F17EC01C90A54200498C10 /* RootViewController.m */; };
 		63F17EC41C90A84400498C10 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F17EC31C90A84400498C10 /* PageViewController.m */; };
+		63FFE6321CDD146300AAD350 /* ListItemUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FFE6311CDD146300AAD350 /* ListItemUIViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,8 @@
 		63F17EC01C90A54200498C10 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		63F17EC21C90A84400498C10 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		63F17EC31C90A84400498C10 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		63FFE6301CDD146300AAD350 /* ListItemUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItemUIViewController.h; sourceTree = "<group>"; };
+		63FFE6311CDD146300AAD350 /* ListItemUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItemUIViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 				6309F1E31C9F1F20003D51E2 /* ItemDetailsViewController.m */,
 				63A192981CDBE1B3007C17DB /* SearchViewController.h */,
 				63A192991CDBE1B3007C17DB /* SearchViewController.m */,
+				63FFE6301CDD146300AAD350 /* ListItemUIViewController.h */,
+				63FFE6311CDD146300AAD350 /* ListItemUIViewController.m */,
 			);
 			name = UIViewControllers;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				6381C2E11C934C010028B382 /* TableCell.m in Sources */,
 				63D8156E1C9389CA000CDEFD /* MyPostsViewController.m in Sources */,
 				63A192971CDBDEBF007C17DB /* ConversationTableViewController.m in Sources */,
+				63FFE6321CDD146300AAD350 /* ListItemUIViewController.m in Sources */,
 				63F17EBE1C90A43B00498C10 /* RegisterViewController.m in Sources */,
 				63A1929A1CDBE1B3007C17DB /* SearchViewController.m in Sources */,
 				63F17EBB1C90A42700498C10 /* LoginViewController.m in Sources */,
