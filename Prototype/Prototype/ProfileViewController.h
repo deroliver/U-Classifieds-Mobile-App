@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface ProfileViewController : UIViewController
-@property (copy, nonatomic) NSArray *categories;
 
+@property (weak, nonatomic) IBOutlet UILabel *UserName;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *UserSchool;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *UserCity;
+
+@property (weak, nonatomic) IBOutlet UIImageView *UserImage;
 @end

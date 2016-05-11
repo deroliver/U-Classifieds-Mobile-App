@@ -8,17 +8,23 @@
 
 #import "SearchTableViewController.h"
 #import "TableCell.h"
+#import "Parse/Parse.h"
 
 @interface SearchTableViewController ()
+
+@property (nonatomic, strong)NSArray *productsArray;
+@property (nonatomic, strong)NSDictionary *product;
 
 @end
 
 @implementation SearchTableViewController
 
+@synthesize productsArray;
+@synthesize product;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+
     [self.tableView setBackgroundColor:[UIColor clearColor]];
     
     UIImageView
@@ -35,6 +41,7 @@
     self.navigationController.navigationBar.translucent = YES;
 
     
+        
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

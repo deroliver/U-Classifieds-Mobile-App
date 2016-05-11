@@ -7,12 +7,15 @@
 //
 
 #import "ItemDetailsViewController.h"
+#import "Parse/Parse.h"
 
 @interface ItemDetailsViewController ()
 
 @end
 
 @implementation ItemDetailsViewController
+
+@synthesize objectID;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,6 +31,15 @@
     _ItemCondition.adjustsFontSizeToFitWidth = YES;
     _ItemDescriptionTitle.adjustsFontSizeToFitWidth = YES;
     _ItemDescription.adjustsFontSizeToFitWidth = YES;
+    
+    NSLog(@"Object ID: %@", objectID);
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Product"];
+    [query whereKey:@"objectId" equalTo:objectID];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        PFObject *object = [objects firstObject];
+        NSLog(@"%@", object);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

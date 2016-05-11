@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchTableView.h"
 
-@interface SearchViewController : UIViewController <UITableViewDataSource, UITableViewDataSource>
+@interface SearchViewController : UIViewController <UITableViewDataSource, UITableViewDelegate , UISearchBarDelegate>
+
+@property (weak, nonatomic) IBOutlet UISearchBar *SearchBar;
+
+
+@property (weak, nonatomic) IBOutlet SearchTableView *tableView;
+
+
 
 @end

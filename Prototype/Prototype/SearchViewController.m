@@ -8,16 +8,44 @@
 
 #import "SearchViewController.h"
 #import "TableCell.h"
+#import "ItemDetailsViewController.h"
+#import <Parse/Parse.h>
 
 @interface SearchViewController ()
+
+@property (nonatomic, strong)NSArray *productsArray;
+@property (nonatomic, strong)NSDictionary *product;
 
 @end
 
 @implementation SearchViewController
 
+@synthesize productsArray;
+@synthesize product;
+@synthesize tableView;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+}
+
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+    PFQuery *query = [PFQuery queryWithClassName:@"Product"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(!error) {
+            // Found data
+            NSLog(@"Successfully retrieved %lu products", (unsigned long)objects.count);
+            productsArray = [[NSArray alloc] initWithArray:objects];
+        }
+        [tableView reloadData];
+    }];
+}
+
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self performSegueWithIdentifier:@"SearchToProductPage" sender:indexPath];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,27 +59,42 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return productsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
     
-    cell.ItemAuthor.text = @"Joseph H. Silverman";
-    cell.ItemPrice.text = @"$124.00";
-    cell.ItemTitle.text = @"Elementary Differential Equations";
-    cell.ItemSeller.text = @"Derik Oliver";
-    cell.EditionNumber.text = @"4th Edition";
-    cell.DistanceAway.text = @"2.1 Miles Away";
+    PFObject *tempObject = [productsArray objectAtIndex:indexPath.row];
     
-    cell.ItemImage.image = [UIImage imageNamed:@"DifferentialSearch"];
-    cell.SelectArrow.image = [UIImage imageNamed:@"Arrow"];
+    cell.ItemAuthor.text = [tempObject objectForKey:@"author"];
+    cell.ItemPrice.text = [tempObject objectForKey:@"price"];
+    cell.ItemTitle.text = [tempObject objectForKey:@"title"];
+    cell.ItemSeller.text = [tempObject objectForKey:@"seller"];
+    //cell.EditionNumber.text = @"4th Edition";
+    //cell.DistanceAway.text = @"2.1 Miles Away";
+    
+    //cell.ItemImage.image = [UIImage imageNamed:@"DifferentialSearch"];
+    //cell.SelectArrow.image = [UIImage imageNamed:@"Arrow"];
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 0.156 * [UIScreen mainScreen].bounds.size.height;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([[segue identifier] isEqualToString:@"SearchToProductPage"]) {
+        
+        NSIndexPath *indexPath = (NSIndexPath *)sender;
+        PFObject *temp = [productsArray objectAtIndex:indexPath.row];
+        NSLog(@"%ld", (long)indexPath.row);
+        NSLog(@"Item ID: %@", temp.objectId);
+        
+        ItemDetailsViewController *IDT = [segue destinationViewController];
+        IDT.objectID = temp.objectId;
+    }
 }
 
 

@@ -34,14 +34,17 @@
 }
 
 - (IBAction)LoginButtonClicked:(id)sender {
-    NSString *username = self.EmailTextField.text;
+    NSString *username = self.UsernameTextField.text;
     NSString *password = self.PasswordTextField.text;
     
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error) {
         if(error != nil)
             NSLog(error.localizedDescription);
-        else
+        else {
             NSLog(@"Successfully Logged in");
+            [self performSegueWithIdentifier:@"LoginToProfile" sender:nil];
+        }
+        
     }];
     
 }

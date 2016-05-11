@@ -32,4 +32,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *ItemDescription;
 
+@property (weak, nonatomic) NSString *objectID;
+
 @end
