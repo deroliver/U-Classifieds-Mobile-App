@@ -45,6 +45,8 @@
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if(!error) {
                 NSLog(@"Successfull Account Creation");
+                [self performSegueWithIdentifier:@"RegisterToInfo" sender:nil];
+                
             } else {
                 NSLog(error.description);
             }

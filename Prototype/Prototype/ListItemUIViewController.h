@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface ListItemUIViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
+extern CGFloat animatedDistance;
+extern const CGFloat KEYBOARD_ANIMATION_DURATION;
+extern const CGFloat MINIMUM_SCROLL_FRACTION;
+extern const CGFloat MAXIMUM_SCROLL_FRACTION;
+extern const CGFloat PORTRAIT_KEYBOARD_HEIGHT;
+
 
 @property (weak, nonatomic) IBOutlet UITextView *DescriptionTextField;
 
@@ -21,4 +27,5 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *TitleTextField;
 
+@property (weak, nonatomic) IBOutlet UITextField *PriceTextField;
 @end

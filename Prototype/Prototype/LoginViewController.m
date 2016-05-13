@@ -38,8 +38,22 @@
     NSString *password = self.PasswordTextField.text;
     
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error) {
-        if(error != nil)
+        if(error != nil) {
             NSLog(error.localizedDescription);
+            
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error Logging In" message:@"There was a problem loggin you in" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction *action) {
+                [alert dismissViewControllerAnimated:YES completion:nil];
+            }];
+        
+            [alert addAction:ok];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+        
+        }
+        
         else {
             NSLog(@"Successfully Logged in");
             [self performSegueWithIdentifier:@"LoginToProfile" sender:nil];

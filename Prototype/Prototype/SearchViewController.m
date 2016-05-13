@@ -26,6 +26,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 
@@ -43,7 +48,7 @@
 }
 
 
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [self performSegueWithIdentifier:@"SearchToProductPage" sender:indexPath];
 }

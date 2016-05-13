@@ -12,6 +12,7 @@
 		630EFC201C989BD40039EE8A /* MessagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630EFC1F1C989BD40039EE8A /* MessagesController.m */; };
 		631173E41C9A1E8000D4A99A /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631173E31C9A1E8000D4A99A /* TabBarController.m */; };
 		631173E81C9A23F600D4A99A /* ProfileNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631173E71C9A23F600D4A99A /* ProfileNavController.m */; };
+		635A59571CE57166001FCBC1 /* RegisterInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635A59561CE57166001FCBC1 /* RegisterInfoViewController.m */; };
 		6381C2E11C934C010028B382 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6381C2E01C934C010028B382 /* TableCell.m */; };
 		638BFC181C98874E0065C74D /* MessagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 638BFC171C98874E0065C74D /* MessagesCell.m */; };
 		63A192971CDBDEBF007C17DB /* ConversationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A192961CDBDEBF007C17DB /* ConversationTableViewController.m */; };
@@ -58,6 +59,8 @@
 		631173E31C9A1E8000D4A99A /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		631173E61C9A23F600D4A99A /* ProfileNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileNavController.h; sourceTree = "<group>"; };
 		631173E71C9A23F600D4A99A /* ProfileNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileNavController.m; sourceTree = "<group>"; };
+		635A59551CE57166001FCBC1 /* RegisterInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterInfoViewController.h; sourceTree = "<group>"; };
+		635A59561CE57166001FCBC1 /* RegisterInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterInfoViewController.m; sourceTree = "<group>"; };
 		6381C2DF1C934C010028B382 /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
 		6381C2E01C934C010028B382 /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
 		638BFC161C98874E0065C74D /* MessagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesCell.h; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 				63A192991CDBE1B3007C17DB /* SearchViewController.m */,
 				63FFE6301CDD146300AAD350 /* ListItemUIViewController.h */,
 				63FFE6311CDD146300AAD350 /* ListItemUIViewController.m */,
+				635A59551CE57166001FCBC1 /* RegisterInfoViewController.h */,
+				635A59561CE57166001FCBC1 /* RegisterInfoViewController.m */,
 			);
 			name = UIViewControllers;
 			sourceTree = "<group>";
@@ -381,6 +386,7 @@
 				63A192A11CDBE297007C17DB /* SearchTableView.m in Sources */,
 				63F17EC41C90A84400498C10 /* PageViewController.m in Sources */,
 				630EFC201C989BD40039EE8A /* MessagesController.m in Sources */,
+				635A59571CE57166001FCBC1 /* RegisterInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

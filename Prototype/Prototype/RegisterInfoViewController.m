@@ -1,40 +1,24 @@
 //
-//  ListItemUIViewController.m
+//  RegisterInfoViewController.m
 //  Prototype
 //
-//  Created by Derik Oliver on 5/6/16.
+//  Created by Derik Oliver on 5/12/16.
 //  Copyright © 2016 Derik Oliver. All rights reserved.
 //
 
-#import "ListItemUIViewController.h"
+#import "RegisterInfoViewController.h"
 #import "Parse/Parse.h"
+#import "ListItemUIViewController.h"
 
-@interface ListItemUIViewController ()
+@interface RegisterInfoViewController ()
+
 
 @end
 
-@implementation ListItemUIViewController
-
-@synthesize DescriptionTextField;
-@synthesize ConditionTextField;
-@synthesize EditionTextField;
-@synthesize AuthorTextField;
-@synthesize TitleTextField;
-@synthesize PriceTextField;
-
-const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
-const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
-const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
-const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
-
-CGFloat animatedDistance;
-
+@implementation RegisterInfoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    self.tabBarController.tabBar.hidden = YES;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self action:@selector(dismissKeyboard)];
@@ -43,30 +27,27 @@ CGFloat animatedDistance;
     [self.view addGestureRecognizer:tap];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
-- (IBAction)ConfirmButton:(id)sender {
-    PFUser *currentUser = [PFUser currentUser];
-    
-    
-    NSLog([currentUser objectForKey:@"firstname"]);
-    PFObject *product = [PFObject objectWithClassName:@"Product"];
-    product[@"title"] = TitleTextField.text;
-    product[@"author"] = AuthorTextField.text;
-    product[@"description"] = DescriptionTextField.text;
-    product[@"price"] = PriceTextField.text;
-    product[@"condition"] = ConditionTextField.text;
-    product[@"edition"] = EditionTextField.text;
-    product[@"seller"] = currentUser.objectId;
-    
-    
-    [product saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if(succeeded) {
-            NSLog(@"Product Uploaded");
-            [self.navigationController popViewControllerAnimated:YES];
+
+- (IBAction)SubmitButtonClicked:(id)sender {
+    if(self.FirstNameTextField.text != @"" && self.LastNameTextField.text != @"" && self.SchoolTextField.text != @"" && self.CityTextField.text != @"") {
+        
+        PFUser *user = [PFUser currentUser];
+        if(user) {
+            user[@"firstname"] = self.FirstNameTextField.text;
+            user[@"lastname"] = self.LastNameTextField.text;
+            user[@"city"] = self.CityTextField.text;
+            user[@"school"] = self.SchoolTextField.text;
+            
+            [user saveInBackground];
         } else {
-            NSLog(@"There was a problem");
+            
         }
-    }];
+    }
 }
 
 
@@ -74,10 +55,6 @@ CGFloat animatedDistance;
     [self.view endEditing:YES];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
@@ -191,6 +168,7 @@ CGFloat animatedDistance;
     [textField resignFirstResponder];
     return YES;
 }
+
 
 /*
 #pragma mark - Navigation

@@ -17,11 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tabBarController.tabBar.hidden = NO;
+    
     [self.navigationController setNavigationBarHidden:YES];
 }
 
+
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:YES animated:animated];
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 - (void)viewDidDisappear:(BOOL)animated {

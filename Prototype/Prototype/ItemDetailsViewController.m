@@ -11,34 +11,45 @@
 
 @interface ItemDetailsViewController ()
 
+@property (nonatomic, weak)NSString *sellerID;
+
+@property (nonatomic, weak)PFObject *item;
+
 @end
 
 @implementation ItemDetailsViewController
+
+@synthesize item;
 
 @synthesize objectID;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _ItemTitleLabel.adjustsFontSizeToFitWidth = YES;
-    _ItemAuthorLabel.adjustsFontSizeToFitWidth = YES;
-    _ItemPriceLabel.adjustsFontSizeToFitWidth = YES;
-    _SellerNameLabel.adjustsFontSizeToFitWidth = YES;
-    _SellerDistanceAwayLabel.adjustsFontSizeToFitWidth = YES;
-    _ItemEditionTitleLabel.adjustsFontSizeToFitWidth = YES;
-    _ItemEdition.adjustsFontSizeToFitWidth = YES;
-    _ItemConditionTitleLabel.adjustsFontSizeToFitWidth = YES;
-    _ItemCondition.adjustsFontSizeToFitWidth = YES;
-    _ItemDescriptionTitle.adjustsFontSizeToFitWidth = YES;
-    _ItemDescription.adjustsFontSizeToFitWidth = YES;
+    self.tabBarController.tabBar.hidden = YES;
     
     NSLog(@"Object ID: %@", objectID);
     
     PFQuery *query = [PFQuery queryWithClassName:@"Product"];
-    [query whereKey:@"objectId" equalTo:objectID];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        PFObject *object = [objects firstObject];
-        NSLog(@"%@", object);
+    [query getObjectInBackgroundWithId:objectID block:^(PFObject *product, NSError *error) {
+        if(!error) {
+            self.sellerID = [product objectForKey:@"seller"];
+            item = product;
+            self.ItemTitleLabel.text = [product objectForKey:@"title"];
+            self.ItemAuthorLabel.text = [product objectForKey:@"author"];
+            self.ItemPriceLabel.text = [NSString stringWithFormat:@"$%@", [product objectForKey:@"price"]];
+            self.ItemCondition.text = [product objectForKey:@"condition"];
+            self.ItemEdition.text = [product objectForKey:@"edition"];
+            self.ItemDescription.text = [product objectForKey:@"description"];
+            
+            NSLog(@"Seller ID: %@", self.sellerID);
+            
+            PFQuery *userQuery = [PFUser query];
+            [userQuery whereKey:@"objectId" equalTo:self.sellerID];
+            PFObject *user = [userQuery getFirstObject];
+            
+            self.SellerNameLabel.text = [NSString stringWithFormat:@"%@ %@", [user objectForKey:@"firstname"], [user objectForKey:@"lastname"]];
+        }
     }];
 }
 
