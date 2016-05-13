@@ -41,7 +41,11 @@
     user.password = self.PasswordTextField.text;
     user.email = self.EmailAddressTextField.text;
     
-    if(self.PasswordTextField.text == self.ConfirmPasswordTextField.text) {
+    NSLog(@"In Register");
+    
+    NSLog(@"%@ %@", self.PasswordTextField.text, self.ConfirmPasswordTextField.text);
+    
+    if([self.PasswordTextField.text isEqualToString:self.ConfirmPasswordTextField.text]) {
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if(!error) {
                 NSLog(@"Successfull Account Creation");
@@ -51,6 +55,8 @@
                 NSLog(error.description);
             }
         }];
+    } else {
+        NSLog(@"Passwords don't match");
     }
 }
 

@@ -44,9 +44,9 @@
             user[@"school"] = self.SchoolTextField.text;
             
             [user saveInBackground];
-        } else {
-            
         }
+        
+        [self performSegueWithIdentifier:@"RegisterInfoToProfile" sender:nil];
     }
 }
 
