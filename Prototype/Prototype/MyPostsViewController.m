@@ -29,6 +29,8 @@
     
     [self.navigationController setNavigationBarHidden:NO];
     
+    self.navigationController.navigationBar.topItem.title = @"My Posts";
+    
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;

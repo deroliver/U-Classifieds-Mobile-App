@@ -49,7 +49,18 @@
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if(!error) {
                 NSLog(@"Successfull Account Creation");
-                [self performSegueWithIdentifier:@"RegisterToInfo" sender:nil];
+                
+                [PFUser logInWithUsernameInBackground:self.UsernameTextField.text password:self.PasswordTextField.text block:^(PFUser *user, NSError *error) {
+                    if(error != nil) {
+                        
+                    }
+                    
+                    else {
+                        NSLog(@"Successfully Logged in");
+                        [self performSegueWithIdentifier:@"RegisterToInfo" sender:nil];
+                    }
+                    
+                }];
                 
             } else {
                 NSLog(error.description);

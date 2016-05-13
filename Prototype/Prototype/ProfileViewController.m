@@ -19,12 +19,15 @@
     
     self.tabBarController.tabBar.hidden = NO;
     
-    [self.navigationController setNavigationBarHidden:YES];
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 
 - (void)viewWillAppear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    self. navigationController.navigationBar.topItem.title = @"My Profile";
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:215 green:215 blue:215 alpha:255];
     self.tabBarController.tabBar.hidden = NO;
 }
 
