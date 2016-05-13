@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "RegisterViewController.h"
 #import "LoginViewController.h"
+#import "Parse/Parse.h"
 
 @interface RootViewController ()
 
@@ -23,6 +24,19 @@
     
     [self setupDefaults];
     
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    PFUser *currentUser = [PFUser currentUser];
+    
+    if(currentUser) {
+        NSLog(@"PERFORM SEGUE");
+        [self performSegueWithIdentifier:@"LoginToProfile" sender:nil];
+    } else {
+        NSLog(@"User not logged in");
+    }
 }
 
 - (void)setupDefaults {

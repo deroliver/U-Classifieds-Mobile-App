@@ -19,6 +19,7 @@
 		63A1929A1CDBE1B3007C17DB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A192991CDBE1B3007C17DB /* SearchViewController.m */; };
 		63A1929D1CDBE1E2007C17DB /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A1929C1CDBE1E2007C17DB /* SearchTableViewController.m */; };
 		63A192A11CDBE297007C17DB /* SearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A192A01CDBE297007C17DB /* SearchTableView.m */; };
+		63A4F8A31CE652BB00622E7B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A4F8A21CE652BB00622E7B /* SettingsViewController.m */; };
 		63BE65A81C8E7EC700E386A7 /* Bariol_Regular_Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63BE65A61C8E7EC700E386A7 /* Bariol_Regular_Italic.otf */; };
 		63BE65A91C8E7EC700E386A7 /* Bariol_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63BE65A71C8E7EC700E386A7 /* Bariol_Regular.otf */; };
 		63D433B11CC6B8E600BB9C80 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D433AF1CC6B8E600BB9C80 /* Parse.framework */; };
@@ -73,6 +74,8 @@
 		63A1929C1CDBE1E2007C17DB /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		63A1929F1CDBE297007C17DB /* SearchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableView.h; sourceTree = "<group>"; };
 		63A192A01CDBE297007C17DB /* SearchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableView.m; sourceTree = "<group>"; };
+		63A4F8A11CE652BB00622E7B /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		63A4F8A21CE652BB00622E7B /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		63BE65A61C8E7EC700E386A7 /* Bariol_Regular_Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Regular_Italic.otf; sourceTree = "<group>"; };
 		63BE65A71C8E7EC700E386A7 /* Bariol_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Regular.otf; sourceTree = "<group>"; };
 		63D433AF1CC6B8E600BB9C80 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../Parse.framework; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				63FFE6311CDD146300AAD350 /* ListItemUIViewController.m */,
 				635A59551CE57166001FCBC1 /* RegisterInfoViewController.h */,
 				635A59561CE57166001FCBC1 /* RegisterInfoViewController.m */,
+				63A4F8A11CE652BB00622E7B /* SettingsViewController.h */,
+				63A4F8A21CE652BB00622E7B /* SettingsViewController.m */,
 			);
 			name = UIViewControllers;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				630AE3931C973667003189D0 /* MyMessagesTableTableViewController.m in Sources */,
 				63E416E01C8E16C60004A02A /* main.m in Sources */,
 				631173E41C9A1E8000D4A99A /* TabBarController.m in Sources */,
+				63A4F8A31CE652BB00622E7B /* SettingsViewController.m in Sources */,
 				63E327F51C921AEE001B6FEE /* ProfileViewController.m in Sources */,
 				63A1929D1CDBE1E2007C17DB /* SearchTableViewController.m in Sources */,
 				63D815711C9395BC000CDEFD /* NavigationController.m in Sources */,

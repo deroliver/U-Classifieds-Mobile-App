@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "RootViewController.h"
 #import <Parse/Parse.h>
 
 @interface AppDelegate ()
@@ -47,6 +48,12 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)resetApp {
+    RootViewController *controller = [[RootViewController alloc] init];
+    
+    _window.rootViewController = controller;
 }
 
 @end
