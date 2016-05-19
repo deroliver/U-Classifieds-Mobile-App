@@ -17,22 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tabBarController.tabBar.hidden = NO;
+    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.backBarButtonItem = nil;
     
-    [self.navigationController setNavigationBarHidden:NO];
 }
 
 
 - (void)viewWillAppear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
-    self. navigationController.navigationBar.topItem.title = @"My Profile";
-    self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:215 green:215 blue:215 alpha:255];
-    self.tabBarController.tabBar.hidden = NO;
+    self.navigationItem.hidesBackButton = YES;
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    self.navigationItem.hidesBackButton = YES;
 }
 
 - (void)didReceiveMemoryWarning {

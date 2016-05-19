@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2e2-Je-wVi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RBz-JM-kSh">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -395,11 +395,12 @@
         <scene sceneID="aD1-cH-YsM">
             <objects>
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="d7c-DU-DHX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gPE-Pl-uoM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8je-kl-ILp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2154" y="1743"/>
+            <point key="canvasLocation" x="-1342" y="1743"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="lRd-Q5-jYG">
@@ -425,6 +426,7 @@
                             <constraint firstAttribute="trailing" secondItem="0TD-yr-7Jv" secondAttribute="trailing" id="zs5-lq-hBo"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eDD-Zw-YWO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <segue destination="9f6-IJ-CNx" kind="show" identifier="LoginToProfile" id="XEQ-ot-v5i"/>
@@ -432,7 +434,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24i-WI-iF5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1734" y="1743"/>
+            <point key="canvasLocation" x="-578" y="1743"/>
         </scene>
         <!--MessagesTab-->
         <scene sceneID="BJ8-x6-WRH">
@@ -558,12 +560,14 @@
                             <constraint firstItem="Sk6-g7-Pmu" firstAttribute="height" secondItem="1af-Z6-oUu" secondAttribute="height" id="ooV-rI-pLF"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Messages" image="GreyMail" id="irm-Eh-i2G"/>
                     <navigationItem key="navigationItem" id="x6d-bu-EYh"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Sj-ix-eFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="488" y="2159"/>
+            <point key="canvasLocation" x="984" y="2371"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="7yD-s5-JVI">
@@ -592,7 +596,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ovn-VR-YMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938" y="2079"/>
+            <point key="canvasLocation" x="1408" y="2371"/>
         </scene>
         <!--SearchTab-->
         <scene sceneID="jZp-b0-qNr">
@@ -712,6 +716,7 @@
                             <constraint firstItem="Y3M-yq-wyQ" firstAttribute="centerY" secondItem="DO0-hM-RbY" secondAttribute="centerY" id="rVK-jo-aie"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="GreySearch" id="WFr-Yq-M12"/>
                     <navigationItem key="navigationItem" id="Nw9-Kk-9m4"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -724,7 +729,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKW-EF-GAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="504" y="2647"/>
+            <point key="canvasLocation" x="548" y="2901"/>
         </scene>
         <!--Register Info View Controller-->
         <scene sceneID="wdP-q1-oft">
@@ -854,7 +859,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lYk-mM-VuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-869" y="2299"/>
+            <point key="canvasLocation" x="195" y="2325"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jGV-Ed-57h">
@@ -868,14 +873,14 @@
                         <color key="barTintColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="gMf-9T-6YM" kind="relationship" relationship="viewControllers" id="cb5-4e-jUe"/>
-                        <segue destination="Tx5-K1-HPC" kind="relationship" relationship="viewControllers" id="cMm-wI-RbO"/>
-                        <segue destination="LQY-cB-RSd" kind="relationship" relationship="viewControllers" id="Xje-7K-mQa"/>
+                        <segue destination="Ltc-4D-Lxs" kind="relationship" relationship="viewControllers" id="oLe-bP-sNJ"/>
+                        <segue destination="JsJ-S0-08h" kind="relationship" relationship="viewControllers" id="ueT-9s-GUI"/>
+                        <segue destination="aCP-xP-0qO" kind="relationship" relationship="viewControllers" id="mhd-IQ-1yX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cEZ-bf-Gqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-402" y="1743"/>
+            <point key="canvasLocation" x="566" y="1743"/>
         </scene>
         <!--ProfileViewController-->
         <scene sceneID="kKh-Xy-GyT">
@@ -895,7 +900,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileBackground" translatesAutoresizingMaskIntoConstraints="NO" id="YMF-oN-yXb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Derik Oliver" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="iVI-1W-GUv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Derik Oliver" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="iVI-1W-GUv">
                                 <rect key="frame" x="128" y="194" width="65" height="14"/>
                                 <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="14"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1004,20 +1009,20 @@
                                     <constraint firstAttribute="width" secondItem="HUI-tR-FYd" secondAttribute="height" multiplier="2:3" id="W8I-vm-kLb"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spokane Washington" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="tnh-ni-0Fi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Spokane Washington" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="tnh-ni-0Fi">
                                 <rect key="frame" x="102" y="226" width="117" height="14"/>
                                 <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="14"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilePic" translatesAutoresizingMaskIntoConstraints="NO" id="2MK-BT-9D7">
-                                <rect key="frame" x="102" y="77" width="115" height="115"/>
+                                <rect key="frame" x="102" y="63" width="115" height="115"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="115" id="7a9-Oj-s2f"/>
                                     <constraint firstAttribute="height" constant="115" id="oWb-Ss-Tpa"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Junior at Whitworth University" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="RyC-uh-CUJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Junior at Whitworth University" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="RyC-uh-CUJ">
                                 <rect key="frame" x="78" y="211" width="164" height="14"/>
                                 <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="14"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1043,6 +1048,7 @@
                             <constraint firstItem="YMF-oN-yXb" firstAttribute="leading" secondItem="oUP-6V-Jek" secondAttribute="leading" id="6kQ-T0-ATk"/>
                             <constraint firstItem="U37-dM-itM" firstAttribute="centerY" secondItem="zFV-Or-pyS" secondAttribute="centerY" id="8al-yn-c0P"/>
                             <constraint firstItem="iVI-1W-GUv" firstAttribute="top" secondItem="2MK-BT-9D7" secondAttribute="bottom" constant="2" id="8xJ-wD-jZJ"/>
+                            <constraint firstItem="2MK-BT-9D7" firstAttribute="centerY" secondItem="YMF-oN-yXb" secondAttribute="centerY" id="Ahl-89-VBf"/>
                             <constraint firstItem="vxC-PL-RmS" firstAttribute="centerY" secondItem="zJb-1s-Gi1" secondAttribute="centerY" id="By6-8h-Sbi"/>
                             <constraint firstItem="C8X-9P-nVI" firstAttribute="centerY" secondItem="6Ur-bT-BFC" secondAttribute="centerY" id="DGp-Z3-Qdc"/>
                             <constraint firstItem="zFV-Or-pyS" firstAttribute="width" secondItem="oUP-6V-Jek" secondAttribute="width" id="E0Q-le-Aow"/>
@@ -1064,7 +1070,6 @@
                             <constraint firstItem="iVI-1W-GUv" firstAttribute="centerX" secondItem="2MK-BT-9D7" secondAttribute="centerX" constant="1" id="i8H-5w-P5T"/>
                             <constraint firstItem="yuS-dD-x4V" firstAttribute="top" secondItem="zFV-Or-pyS" secondAttribute="bottom" id="kuP-Hv-67r"/>
                             <constraint firstItem="yuS-dD-x4V" firstAttribute="width" secondItem="oUP-6V-Jek" secondAttribute="width" id="l5g-Ww-T4K"/>
-                            <constraint firstItem="2MK-BT-9D7" firstAttribute="centerY" secondItem="YMF-oN-yXb" secondAttribute="centerY" constant="14.5" id="nHv-NU-teF"/>
                             <constraint firstItem="YMF-oN-yXb" firstAttribute="height" secondItem="oUP-6V-Jek" secondAttribute="height" multiplier="0.5" id="qrY-bf-1se"/>
                             <constraint firstItem="VsW-Mf-UIP" firstAttribute="centerY" secondItem="oUP-6V-Jek" secondAttribute="centerY" id="sfB-AN-71E"/>
                             <constraint firstItem="VsW-Mf-UIP" firstAttribute="centerX" secondItem="oUP-6V-Jek" secondAttribute="centerX" id="swd-Er-nhz"/>
@@ -1080,6 +1085,7 @@
                             <constraint firstAttribute="trailing" secondItem="vxC-PL-RmS" secondAttribute="trailing" constant="26" id="zdh-9m-ISV"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="GreyProfile" id="mJV-Un-f0v"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Profile" id="7R8-v6-SAY">
                         <barButtonItem key="leftBarButtonItem" image="SellNavBar" id="gSb-ag-N1l">
@@ -1090,9 +1096,13 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="SettingsNavBar" id="fIi-EW-4GH">
                             <color key="tintColor" red="0.0" green="0.70588235294117641" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="iia-zd-Dqb" kind="show" id="OVJ-Ot-QLk"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="UserCity" destination="tnh-ni-0Fi" id="noE-FC-Sc9"/>
@@ -1120,7 +1130,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6pf-sb-bEm">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6RS-qJ-KaO" userLabel="LogoutButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6RS-qJ-KaO" userLabel="LogoutButton">
                                 <rect key="frame" x="85" y="392" width="151" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="FDz-vC-esn"/>
@@ -1132,7 +1142,7 @@
                                     <action selector="SubmitButtonClicked:" destination="bbo-g7-J2Q" eventType="touchUpInside" id="igR-Ij-GTR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAF-T4-jMV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Logout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAF-T4-jMV">
                                 <rect key="frame" x="85" y="392" width="151" height="42"/>
                                 <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="17"/>
                                 <color key="textColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1157,7 +1167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHI-e6-3fC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="488" y="1623"/>
+            <point key="canvasLocation" x="976" y="1743"/>
         </scene>
         <!--ItemDetails-->
         <scene sceneID="Apf-M3-b1b">
@@ -1378,84 +1388,6 @@
             </objects>
             <point key="canvasLocation" x="2820" y="1083"/>
         </scene>
-        <!--Profile-->
-        <scene sceneID="LzO-9w-kF5">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gMf-9T-6YM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="BlueProfile" id="YFy-3R-Uql">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
-                                <color key="value" red="0.0" green="0.70588235294117641" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qKC-kq-RlL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Ltc-4D-Lxs" kind="relationship" relationship="rootViewController" id="zLN-TV-6G6"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZCv-Ig-d4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="14" y="1083"/>
-        </scene>
-        <!--Messages-->
-        <scene sceneID="FNA-ht-kNM">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tx5-K1-HPC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Messages" image="GreyMail" id="CNX-sd-6d1">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.0" green="0.70588235294117641" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NqF-hv-gel">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="JsJ-S0-08h" kind="relationship" relationship="rootViewController" id="WyG-qC-sHp"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hoZ-Rt-wUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="44" y="2079"/>
-        </scene>
-        <!--Search-->
-        <scene sceneID="Qbi-Ju-lve">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LQY-cB-RSd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="GreySearch" id="e8k-vN-I0r">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.0" green="0.70588235294117641" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1FO-Ik-OQI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="aCP-xP-0qO" kind="relationship" relationship="rootViewController" id="epU-DB-bQ1"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PA4-wa-D12" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="30" y="2647"/>
-        </scene>
         <!--LoginController-->
         <scene sceneID="vtY-Z6-uPW">
             <objects>
@@ -1585,7 +1517,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1318" y="1743"/>
+            <point key="canvasLocation" x="-182" y="1743"/>
         </scene>
         <!--RegisterController-->
         <scene sceneID="6a5-oF-g37">
@@ -1729,14 +1661,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9M-nX-Nca" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="Scc-kv-TLA"/>
             </objects>
-            <point key="canvasLocation" x="-869" y="1743"/>
+            <point key="canvasLocation" x="195" y="1743"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="R1v-pW-HcV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RBz-JM-kSh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vvg-NF-SMM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2e2-Je-wVi" kind="relationship" relationship="rootViewController" id="39d-8t-0qf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="poM-Oi-M0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-948" y="1743"/>
         </scene>
     </scenes>
     <resources>
         <image name="Arrow" width="24" height="45"/>
         <image name="Background" width="311" height="552"/>
         <image name="BlueMail" width="17" height="11"/>
-        <image name="BlueProfile" width="17" height="15"/>
         <image name="BottomBlack" width="155" height="42"/>
         <image name="CirclesFirst" width="36" height="17"/>
         <image name="CirclesSecond" width="36" height="17"/>
@@ -1744,6 +1694,7 @@
         <image name="DividerBar" width="311" height="8"/>
         <image name="Facebook" width="107" height="26"/>
         <image name="GreyMail" width="17" height="11"/>
+        <image name="GreyProfile" width="17" height="15"/>
         <image name="GreySearch" width="17" height="16"/>
         <image name="LoginAppButton" width="237" height="46"/>
         <image name="ProfileBackground" width="311" height="277"/>
@@ -1754,9 +1705,9 @@
         <image name="WhiteBackground" width="311" height="552"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="he3-uw-uKr"/>
-        <segue reference="oss-wG-FrK"/>
+        <segue reference="6Gx-ii-dzo"/>
         <segue reference="Qkn-4L-XbO"/>
+        <segue reference="oss-wG-FrK"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
 </document>
