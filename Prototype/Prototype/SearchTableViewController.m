@@ -76,6 +76,8 @@
     cell.EditionNumber.text = @"4th Edition";
     cell.DistanceAway.text = @"2.1 Miles Away";
     
+    
+    
     cell.ItemImage.image = [UIImage imageNamed:@"DifferentialSearch"];
     cell.SelectArrow.image = [UIImage imageNamed:@"Arrow"];
     

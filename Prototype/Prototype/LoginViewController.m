@@ -15,8 +15,11 @@
 
 @implementation LoginViewController
 
+@synthesize ActivityIndicator;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [ActivityIndicator setHidden:YES];
     
     self.LoginLabelWidth.constant = 129 * ([UIScreen mainScreen].bounds.size.width / 414);
     
@@ -30,15 +33,17 @@
 }
 
 
-
-
 - (void)dismissKeyboard {
     [self.view endEditing:YES];
 }
 
+
 - (IBAction)LoginButtonClicked:(id)sender {
     NSString *username = self.UsernameTextField.text;
     NSString *password = self.PasswordTextField.text;
+    
+    [ActivityIndicator setHidden:NO];
+    [ActivityIndicator startAnimating];
     
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error) {
         if(error != nil) {
@@ -59,6 +64,7 @@
         
         else {
             NSLog(@"Successfully Logged in");
+            [ActivityIndicator stopAnimating];
             [self performSegueWithIdentifier:@"LoginToProfile" sender:nil];
         }
         

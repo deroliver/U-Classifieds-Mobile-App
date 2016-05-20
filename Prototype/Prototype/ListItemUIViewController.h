@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListItemUIViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
+@interface ListItemUIViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 extern CGFloat animatedDistance;
 extern const CGFloat KEYBOARD_ANIMATION_DURATION;
 extern const CGFloat MINIMUM_SCROLL_FRACTION;
@@ -16,16 +16,18 @@ extern const CGFloat MAXIMUM_SCROLL_FRACTION;
 extern const CGFloat PORTRAIT_KEYBOARD_HEIGHT;
 
 
-@property (weak, nonatomic) IBOutlet UITextView *DescriptionTextField;
-
-@property (weak, nonatomic) IBOutlet UITextField *ConditionTextField;
-
-
-@property (weak, nonatomic) IBOutlet UITextField *EditionTextField;
+@property (weak, nonatomic) IBOutlet UITextField *TitleTextField;
 
 @property (weak, nonatomic) IBOutlet UITextField *AuthorTextField;
 
-@property (weak, nonatomic) IBOutlet UITextField *TitleTextField;
+@property (weak, nonatomic) IBOutlet UITextField *EditionTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *ConditionTextField;
 
 @property (weak, nonatomic) IBOutlet UITextField *PriceTextField;
+
+@property (weak, nonatomic) IBOutlet UITextView *DescriptionTextField;
+
+@property (weak, nonatomic) IBOutlet UIImageView *ItemImage;
+
 @end

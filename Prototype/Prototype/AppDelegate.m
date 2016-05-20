@@ -25,6 +25,17 @@
         configuration.server = @"https://parseapi.back4app.com/";
     }]];
     
+    PFUser *user = [PFUser currentUser];
+    
+    if(user) {
+        self.authenticated = YES;
+        
+    }
+    else {
+        self.authenticated = NO;
+    }
+    
+    
     return YES;
 }
 
@@ -50,10 +61,6 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (void)resetApp {
-    RootViewController *controller = [[RootViewController alloc] init];
-    
-    _window.rootViewController = controller;
-}
+
 
 @end

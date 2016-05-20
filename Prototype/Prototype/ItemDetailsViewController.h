@@ -34,4 +34,13 @@
 
 @property (weak, nonatomic) NSString *objectID;
 
+@property (nonatomic) BOOL isFavorited;
+
+@property (weak, nonatomic) IBOutlet UIButton *FavoriteButton;
+
+@property (weak, nonatomic) IBOutlet UIImageView *ItemImage;
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *Spinner;
+
+
 @end

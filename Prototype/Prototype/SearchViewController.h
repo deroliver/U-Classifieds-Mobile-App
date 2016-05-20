@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SearchTableView.h"
+#import "Parse/Parse.h"
 
 @interface SearchViewController : UIViewController <UITableViewDataSource, UITableViewDelegate , UISearchBarDelegate>
 
@@ -16,6 +17,8 @@
 
 @property (weak, nonatomic) IBOutlet SearchTableView *tableView;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *Spinner;
 
 @end

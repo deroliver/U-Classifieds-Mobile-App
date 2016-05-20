@@ -21,6 +21,7 @@
 @synthesize AuthorTextField;
 @synthesize TitleTextField;
 @synthesize PriceTextField;
+@synthesize ItemImage;
 
 const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
 const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
@@ -63,12 +64,19 @@ CGFloat animatedDistance;
         if(succeeded) {
             NSLog(@"Product Uploaded");
             [self.navigationController popViewControllerAnimated:YES];
+            if(ItemImage.image != nil) {
+                NSData *imageData = UIImagePNGRepresentation(ItemImage.image);
+                PFFile *fileData = [PFFile fileWithData:imageData];
+                product[@"productImage"] = fileData;
+                [product saveInBackground];
+            }
+            
         } else {
             NSLog(@"There was a problem");
         }
     }];
-}
 
+}
 
 - (void)dismissKeyboard {
     [self.view endEditing:YES];
@@ -191,6 +199,36 @@ CGFloat animatedDistance;
     [textField resignFirstResponder];
     return YES;
 }
+
+- (IBAction)TakePhoto:(id)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+
+- (IBAction)SelectPhoto:(id)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.ItemImage.image = chosenImage;
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+}
+
 
 /*
 #pragma mark - Navigation

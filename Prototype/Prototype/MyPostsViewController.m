@@ -7,16 +7,31 @@
 //
 
 #import "MyPostsViewController.h"
+#import "ItemDetailsViewController.h"
 #import "TableCell.h"
+#import "Parse/Parse.h"
 
 @interface MyPostsViewController ()
+
+@property (nonatomic, strong)NSMutableArray *productsArray;
+@property (nonatomic, strong)NSDictionary *product;
+@property (nonatomic, strong)NSMutableArray *objectIDs;
+@property NSInteger skipNumber;
 
 @end
 
 @implementation MyPostsViewController
 
+@synthesize productsArray;
+@synthesize product;
+@synthesize objectIDs;
+@synthesize skipNumber;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    productsArray = [[NSMutableArray alloc] init];
+    objectIDs = [[NSMutableArray alloc] init];
+    skipNumber = 0;
     
     [self.tableView setBackgroundColor:[UIColor clearColor]];
     
@@ -27,21 +42,30 @@
     
     [self.tableView setBackgroundView:tableBackgroundView];
     
-    [self.navigationController setNavigationBarHidden:NO];
-    
     self.navigationController.navigationBar.topItem.title = @"My Posts";
     
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.shadowImage = [UIImage new];
-    self.navigationController.navigationBar.translucent = YES;
     
+    [self getMoreProducts];
+}
+
+- (void)getMoreProducts {
+    PFUser *user = [PFUser currentUser];
+    PFQuery *query = [PFQuery queryWithClassName:@"Product"];
+    [query whereKey:@"seller" equalTo:user.objectId];
+    query.skip = skipNumber;
+    skipNumber += 10;
+    query.limit = 10;
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(!error) {
+            // Found data
+            NSLog(@"Successfully retrieved %lu products", (unsigned long)objects.count);
+            for(PFObject *object in objects) {
+                [productsArray addObject:object];
+            }
+        }
+        [self.tableView reloadData];
+    }];
     
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,33 +75,71 @@
 
 #pragma mark - Table view data source
 
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self performSegueWithIdentifier:@"MyPostsToDetails" sender:indexPath];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return productsArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
     
-    cell.ItemAuthor.text = @"Joseph H. Silverman";
-    cell.ItemPrice.text = @"$124.00";
-    cell.ItemTitle.text = @"Elementary Differential Equations";
-    cell.ItemSeller.text = @"Derik Oliver";
-    cell.EditionNumber.text = @"4th Edition";
-    cell.DistanceAway.text = @"2.1 Miles Away";
+    PFObject *tempObject = [productsArray objectAtIndex:indexPath.row];
     
-    cell.ItemImage.image = [UIImage imageNamed:@"DifferentialSearch"];
-    cell.SelectArrow.image = [UIImage imageNamed:@"Arrow"];
+    cell.ItemAuthor.text = [tempObject objectForKey:@"author"];
+    cell.ItemPrice.text = [tempObject objectForKey:@"price"];
+    cell.ItemTitle.text = [tempObject objectForKey:@"title"];
+    cell.ItemSeller.text = [tempObject objectForKey:@"seller"];
+    
+    PFFile *image = [tempObject objectForKey:@"productImage"];
+    if(image != nil) {
+        [image getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if(!data) {
+                
+            } else {
+                cell.ItemImage.image = [UIImage imageWithData:data];
+            }
+        }];
+    }
+
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 0.156 * [UIScreen mainScreen].bounds.size.height;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([[segue identifier] isEqualToString:@"MyPostsToDetails"]) {
+        
+        NSIndexPath *indexPath = (NSIndexPath *)sender;
+        PFObject *temp = [productsArray objectAtIndex:indexPath.row];
+        NSLog(@"%ld", (long)indexPath.row);
+        NSLog(@"Item ID: %@", temp.objectId);
+        
+        ItemDetailsViewController *IDT = [segue destinationViewController];
+        IDT.objectID = temp.objectId;
+    }
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat currentOffset = scrollView.contentOffset.y;
+    CGFloat maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height;
+    
+    if(maximumOffset - currentOffset <= 10.0) {
+        [self getMoreProducts];
+    }
 }
 
 

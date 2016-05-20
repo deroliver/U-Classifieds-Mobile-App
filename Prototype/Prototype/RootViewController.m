@@ -24,6 +24,8 @@
     
     [self setupDefaults];
     
+    self.tabBarController.tabBar.hidden = YES;
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {

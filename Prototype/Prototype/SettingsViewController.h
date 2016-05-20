@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property (weak, nonatomic) IBOutlet UIImageView *ProfileImage;
+
+
+@property (weak, nonatomic) IBOutlet UITextField *FirstNameTextView;
+
+@property (weak, nonatomic) IBOutlet UITextField *LastNameTextView;
+
+
+@property (weak, nonatomic) IBOutlet UITextField *CityTextView;
+
+
+@property (weak, nonatomic) IBOutlet UITextField *YearSchoolTextView;
 
 @end

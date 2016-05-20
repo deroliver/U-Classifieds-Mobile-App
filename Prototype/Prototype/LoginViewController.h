@@ -19,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *PasswordTextField;
 
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *ActivityIndicator;
 
 @end

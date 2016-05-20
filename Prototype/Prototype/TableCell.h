@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ParseUI/ParseUI.h"
 
 @interface TableCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *ItemImage;
+
+@property (weak, nonatomic) IBOutlet PFImageView *ItemImage;
 
 @property (weak, nonatomic) IBOutlet UILabel *ItemTitle;
 
