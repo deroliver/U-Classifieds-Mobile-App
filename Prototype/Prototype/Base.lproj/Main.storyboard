@@ -2078,10 +2078,13 @@
                         </connections>
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <segue destination="rR6-sb-ynz" kind="show" identifier="SavedToDetails" id="00f-M0-SeT"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xi6-BF-KfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1473" y="1691"/>
+            <point key="canvasLocation" x="1407" y="1707"/>
         </scene>
     </scenes>
     <resources>
@@ -2105,7 +2108,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6Gx-ii-dzo"/>
-        <segue reference="Qkn-4L-XbO"/>
+        <segue reference="00f-M0-SeT"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
 </document>

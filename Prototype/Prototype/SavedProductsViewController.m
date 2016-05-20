@@ -130,7 +130,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [self performSegueWithIdentifier:@"MyPostsToDetails" sender:indexPath];
+    [self performSegueWithIdentifier:@"SavedToDetails" sender:indexPath];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -172,7 +172,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([[segue identifier] isEqualToString:@"MyPostsToDetails"]) {
+    if([[segue identifier] isEqualToString:@"SavedToDetails"]) {
         
         NSIndexPath *indexPath = (NSIndexPath *)sender;
         PFObject *temp = [productsArray objectAtIndex:indexPath.row];
