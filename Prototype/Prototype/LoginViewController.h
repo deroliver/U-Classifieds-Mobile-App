@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
+@interface LoginViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *LoginLabelWidth;
 
